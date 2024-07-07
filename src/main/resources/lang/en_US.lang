@@ -1,2 +1,6 @@
-tile.deep_dark_portal.name=Red Diamond Block
-tile.last_millenium_portal.name=Red Diamond Block
+tile.exuportalfix:deep_dark_portal.name=Portal to The Deep Dark
+tile.exuportalfix:last_millenium_portal.name=Portal to The Last Millenium
+tile.exuportalfix:deep_dark_portal.documentation.0=As an experienced miner you naturally wish to mine deeper and further than ever before into areas of natural wealth. The deep dark is a realm far below the void, filled with natural resources and deadly enemies. Some say that the darkness within this realm is alive and will consume any unlucky adventurer who wanders too far into it. Remember to bring torches.
+tile.exuportalfix:deep_dark_portal.documentation.1=Torches will not protect you completely, however since mobs will spawn at all light levels in the Deep Dark. Magnum torches and Chandeliers will still prevent spawning.
+tile.exuportalfix:last_millenium_portal.documentation.0=Sometimes you just wish to get away from it all, well here's your chance to go to a place where there is literally nothing to bother you. Right click the portal will teleport you outside the normal flow of time, from there you will inevitably end up drifting to the end of time, just a few centuries before reality finally dissolves away.
+tile.exuportalfix:last_millenium_portal.documentation.1=This place is known as 'The Last Millenium'. All life, energy, knowledge, passion, struggle, philosophy and meaning is just a few short centuries from being rendered fully pointless. On the plus side, rent is very cheap now.
