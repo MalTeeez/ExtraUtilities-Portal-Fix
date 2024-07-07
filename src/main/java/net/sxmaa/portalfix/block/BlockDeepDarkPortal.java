@@ -40,7 +40,7 @@ public class BlockDeepDarkPortal extends BlockContainer {
     @Override
     public void registerBlockIcons(IIconRegister par1IIconRegister) {
         super.registerBlockIcons(par1IIconRegister);
-        particle = par1IIconRegister.registerIcon("portalfix:particle_deep_dark_portal");
+        particle = par1IIconRegister.registerIcon("exuportalfix:particle_deep_dark_portal");
     }
 
     @Override

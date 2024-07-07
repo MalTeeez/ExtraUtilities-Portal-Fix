@@ -40,7 +40,7 @@ public class BlockLastMilleniumPortal extends BlockContainer {
     @Override
     public void registerBlockIcons(IIconRegister par1IIconRegister) {
         super.registerBlockIcons(par1IIconRegister);
-        particle = par1IIconRegister.registerIcon("portalfix:particle_last_millenium_portal");
+        particle = par1IIconRegister.registerIcon("exuportalfix:particle_last_millenium_portal");
     }
 
     @Override
