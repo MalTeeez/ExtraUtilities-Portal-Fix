@@ -1,4 +1,4 @@
-package net.sxmaa.portalfix.teleporter;
+package net.sxmaa.exuportalfix.teleporter;
 
 import java.util.LinkedList;
 
@@ -18,9 +18,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.common.util.FakePlayerFactory;
-import net.sxmaa.portalfix.Config;
-import net.sxmaa.portalfix.ExtraUtilitiesPortalFix;
-import net.sxmaa.portalfix.tileentity.TELastMilleniumPortal;
+import net.sxmaa.exuportalfix.Config;
+import net.sxmaa.exuportalfix.ExtraUtilitiesPortalFix;
+import net.sxmaa.exuportalfix.tileentity.TELastMilleniumPortal;
 
 public class TeleporterLastMillenium extends Teleporter {
     private final WorldServer worldServerInstance;

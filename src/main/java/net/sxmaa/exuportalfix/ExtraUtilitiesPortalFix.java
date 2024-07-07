@@ -1,4 +1,4 @@
-package net.sxmaa.portalfix;
+package net.sxmaa.exuportalfix;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,13 +10,13 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
-@Mod(modid = ExtraUtilitiesPortalFix.MODID, version = Tags.VERSION, name = "ExtraUtilities Portal Fix", acceptedMinecraftVersions = "[1.7.10]")
+@Mod(modid = ExtraUtilitiesPortalFix.MODID, version = Tags.VERSION, name = "ExtraUtilities Portal Fix", acceptedMinecraftVersions = "[1.7.10]", dependencies = "required-after:ExtraUtilities")
 public class ExtraUtilitiesPortalFix {
 
     public static final String MODID = "exuportalfix";
     public static final Logger LOG = LogManager.getLogger(MODID);
 
-    @SidedProxy(clientSide = "net.sxmaa.portalfix.ClientProxy", serverSide = "net.sxmaa.portalfix.CommonProxy")
+    @SidedProxy(clientSide = "net.sxmaa.exuportalfix.ClientProxy", serverSide = "net.sxmaa.exuportalfix.CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.EventHandler

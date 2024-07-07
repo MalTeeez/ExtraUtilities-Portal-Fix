@@ -1,4 +1,4 @@
-package net.sxmaa.portalfix;
+package net.sxmaa.exuportalfix;
 
 import java.io.File;
 

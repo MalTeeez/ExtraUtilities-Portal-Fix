@@ -1,4 +1,4 @@
-package net.sxmaa.portalfix.teleporter;
+package net.sxmaa.exuportalfix.teleporter;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
@@ -7,9 +7,9 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.chunk.Chunk;
-import net.sxmaa.portalfix.Config;
-import net.sxmaa.portalfix.ExtraUtilitiesPortalFix;
-import net.sxmaa.portalfix.tileentity.TEDeepDarkPortal;
+import net.sxmaa.exuportalfix.Config;
+import net.sxmaa.exuportalfix.ExtraUtilitiesPortalFix;
+import net.sxmaa.exuportalfix.tileentity.TEDeepDarkPortal;
 
 public class TeleporterDeepDark extends Teleporter {
     private final WorldServer worldServerInstance;

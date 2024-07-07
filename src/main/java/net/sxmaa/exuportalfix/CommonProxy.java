@@ -1,4 +1,4 @@
-package net.sxmaa.portalfix;
+package net.sxmaa.exuportalfix;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -6,25 +6,27 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
-import net.sxmaa.portalfix.block.BlockDeepDarkPortal;
-import net.sxmaa.portalfix.block.BlockLastMilleniumPortal;
-import net.sxmaa.portalfix.tileentity.TEDeepDarkPortal;
-import net.sxmaa.portalfix.tileentity.TELastMilleniumPortal;
+import net.sxmaa.exuportalfix.block.BlockDeepDarkPortal;
+import net.sxmaa.exuportalfix.block.BlockLastMilleniumPortal;
+import net.sxmaa.exuportalfix.tileentity.TEDeepDarkPortal;
+import net.sxmaa.exuportalfix.tileentity.TELastMilleniumPortal;
 
 public class CommonProxy {
 
-    public Block deepDarkPortal;
-    public Block lastMilleniumPortal;
+    public BlockDeepDarkPortal deepDarkPortal;
+    public BlockLastMilleniumPortal lastMilleniumPortal;
 
     // preInit "Run before anything else. Read your config, create blocks, items, etc, and register them with the
     // GameRegistry." (Remove if not needed)
     public void preInit(FMLPreInitializationEvent event) {
         Config.synchronizeConfiguration(event.getSuggestedConfigurationFile());
 
-        deepDarkPortal = new BlockDeepDarkPortal();
-        lastMilleniumPortal = new BlockLastMilleniumPortal();
-        GameRegistry.registerTileEntity(TEDeepDarkPortal.class, "portalfix.deep_dark_portal");
-        GameRegistry.registerTileEntity(TELastMilleniumPortal.class, "portalfix.last_milenium_portal");
+
+        GameRegistry.registerBlock(deepDarkPortal = new BlockDeepDarkPortal(), Names.DEEP_DARK_BLOCK);
+        GameRegistry.registerBlock(lastMilleniumPortal = new BlockLastMilleniumPortal(), Names.LAST_MILL_BLOCK);
+
+        GameRegistry.registerTileEntity(TEDeepDarkPortal.class, ExtraUtilitiesPortalFix.MODID + "." + Names.DEEP_DARK_BLOCK);
+        GameRegistry.registerTileEntity(TELastMilleniumPortal.class, ExtraUtilitiesPortalFix.MODID + "." + Names.LAST_MILL_BLOCK);
 
         ExtraUtilitiesPortalFix.LOG.info("Adding fixed Extra Utilities portal blocks..");
         ExtraUtilitiesPortalFix.LOG.info("Deep Dark dimension has id {}", String.valueOf(Config.deep_dark_id));

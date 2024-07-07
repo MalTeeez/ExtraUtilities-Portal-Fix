@@ -1,6 +1,5 @@
-package net.sxmaa.portalfix.block;
+package net.sxmaa.exuportalfix.block;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockContainer;
@@ -14,25 +13,24 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import net.sxmaa.portalfix.Config;
-import net.sxmaa.portalfix.ExtraUtilitiesPortalFix;
-import net.sxmaa.portalfix.particle.ParticleHelper;
-import net.sxmaa.portalfix.particle.ParticlePortal;
-import net.sxmaa.portalfix.teleporter.TeleporterDeepDark;
-import net.sxmaa.portalfix.tileentity.TEDeepDarkPortal;
+import net.sxmaa.exuportalfix.Config;
+import net.sxmaa.exuportalfix.ExtraUtilitiesPortalFix;
+import net.sxmaa.exuportalfix.Names;
+import net.sxmaa.exuportalfix.particle.ParticleHelper;
+import net.sxmaa.exuportalfix.particle.ParticlePortal;
+import net.sxmaa.exuportalfix.teleporter.TeleporterDeepDark;
+import net.sxmaa.exuportalfix.tileentity.TEDeepDarkPortal;
 
 import java.util.Random;
 
 public class BlockDeepDarkPortal extends BlockContainer {
-    private static final String name = "deep_dark_portal";
     public IIcon particle;
 
     public BlockDeepDarkPortal()
     {
         super(Material.rock);
-        GameRegistry.registerBlock(this, name);
-        setBlockName(name);
-        setBlockTextureName(ExtraUtilitiesPortalFix.MODID + ":" + name);
+        setBlockName(Names.DEEP_DARK_BLOCK);
+        setBlockTextureName(ExtraUtilitiesPortalFix.MODID + ":" + Names.DEEP_DARK_BLOCK);
         setCreativeTab(CreativeTabs.tabBlock);
     }
 
@@ -40,7 +38,7 @@ public class BlockDeepDarkPortal extends BlockContainer {
     @Override
     public void registerBlockIcons(IIconRegister par1IIconRegister) {
         super.registerBlockIcons(par1IIconRegister);
-        particle = par1IIconRegister.registerIcon("exuportalfix:particle_deep_dark_portal");
+        particle = par1IIconRegister.registerIcon(ExtraUtilitiesPortalFix.MODID + ":particle_" + Names.DEEP_DARK_BLOCK);
     }
 
     @Override
@@ -74,5 +72,10 @@ public class BlockDeepDarkPortal extends BlockContainer {
         double dx = MathHelper.clamp_double(0.5D + 0.2D * r.nextGaussian(), 0.0D, 1.0D);
         double dz = MathHelper.clamp_double(0.5D + 0.2D * r.nextGaussian(), 0.0D, 1.0D);
         ParticleHelper.addParticle((EntityFX)new ParticlePortal(world, x + dx, (y + 1), z + dz, 1.0F, 1.0F, 1.0F, this.particle));
+    }
+
+    @Override
+    public String getLocalizedName() {
+        return super.getLocalizedName();
     }
 }

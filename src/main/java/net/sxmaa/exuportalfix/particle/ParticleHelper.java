@@ -1,4 +1,4 @@
-package net.sxmaa.portalfix.particle;
+package net.sxmaa.exuportalfix.particle;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

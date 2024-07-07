@@ -1,10 +1,10 @@
-package net.sxmaa.portalfix;
+package net.sxmaa.exuportalfix;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import net.minecraft.client.resources.IReloadableResourceManager;
 import net.minecraft.client.resources.IResourceManagerReloadListener;
 import net.minecraft.client.Minecraft;
-import net.sxmaa.portalfix.particle.ParticleHelper;
+import net.sxmaa.exuportalfix.particle.ParticleHelper;
 
 public class ClientProxy extends CommonProxy {
 

@@ -1,4 +1,4 @@
-package net.sxmaa.portalfix.particle;
+package net.sxmaa.exuportalfix.particle;
 
 import net.minecraft.client.particle.EntityFX;
 import net.minecraft.client.renderer.Tessellator;
