@@ -28,10 +28,11 @@ public class BlockLastMilleniumPortal extends BlockContainer {
 
     public BlockLastMilleniumPortal()
     {
-        super(Material.rock);
+        super(Material.iron);
         setBlockName(Names.LAST_MILL_BLOCK);
         setBlockTextureName(ExtraUtilitiesPortalFix.MODID + ":" + Names.LAST_MILL_BLOCK);
         setCreativeTab(CreativeTabs.tabBlock);
+        setHarvestLevel("pickaxe", 2);
     }
 
     @SideOnly(Side.CLIENT)

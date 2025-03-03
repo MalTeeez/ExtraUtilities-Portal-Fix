@@ -28,10 +28,11 @@ public class BlockDeepDarkPortal extends BlockContainer {
 
     public BlockDeepDarkPortal()
     {
-        super(Material.rock);
+        super(Material.iron);
         setBlockName(Names.DEEP_DARK_BLOCK);
         setBlockTextureName(ExtraUtilitiesPortalFix.MODID + ":" + Names.DEEP_DARK_BLOCK);
         setCreativeTab(CreativeTabs.tabBlock);
+        setHarvestLevel("pickaxe", 2);
     }
 
     @SideOnly(Side.CLIENT)
@@ -78,4 +79,5 @@ public class BlockDeepDarkPortal extends BlockContainer {
     public String getLocalizedName() {
         return super.getLocalizedName();
     }
+
 }
