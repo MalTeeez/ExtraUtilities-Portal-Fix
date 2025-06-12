@@ -2,6 +2,7 @@ package net.sxmaa.exuportalfix.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.particle.EntityFX;
@@ -31,8 +32,11 @@ public class BlockLastMilleniumPortal extends BlockContainer {
         super(Material.iron);
         setBlockName(Names.LAST_MILL_BLOCK);
         setBlockTextureName(ExtraUtilitiesPortalFix.MODID + ":" + Names.LAST_MILL_BLOCK);
-        setCreativeTab(CreativeTabs.tabBlock);
-        setHarvestLevel("pickaxe", 2);
+        setCreativeTab(CreativeTabs.tabTransport);
+        this.setHarvestLevel("pickaxe", 2);
+        this.setHardness(1.5f);
+        this.setResistance(12.0f);
+        this.setStepSound(Block.soundTypePiston);
     }
 
     @SideOnly(Side.CLIENT)
